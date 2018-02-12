@@ -20,7 +20,6 @@
     .star
       transition-property: color, -webkit-transform
       transition-duration: 1s
-      color: cornflowerblue
 
     .star.on
       color: cornflowerblue

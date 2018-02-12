@@ -54,6 +54,8 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "bootstrap": "^4.0.0",
+    "bootstrap-vue": "^2.0.0-rc.1",
     "element-ui": "^2.1.0",
     "moment": "^2.20.1",
     "node-sass": "^4.7.2",

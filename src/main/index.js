@@ -1,6 +1,7 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import {app, BrowserWindow, Tray} from 'electron'
+import path from 'path'
 
 /**
  * Set `__static` path to static files in production
@@ -20,13 +21,19 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
-    height: 400,
+    height: 270,
     useContentSize: true,
-    width: 600,
-    frame: false
+    width: 270,
+    frame: false,
+    resizable: false,
+    transparent: true,
+    alwaysOnTop: true
   })
 
   mainWindow.loadURL(winURL)
+  const iconPath = path.join(__dirname, '../renderer/assets/ribbon.png')
+  const tray = new Tray(iconPath)
+  tray.setToolTip('BinaryClock')
 
   mainWindow.on('closed', () => {
     mainWindow = null

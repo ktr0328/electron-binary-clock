@@ -1,14 +1,6 @@
 <template lang="pug">
   div#app
     el-container
-      el-aside
-        ul
-          li
-            router-link(to="watch") Binary Clock
-          li
-            router-link(to="test-page") Test Page
-          li
-            router-link(to="landing-page") Landing Page
       router-view
 </template>
 
@@ -19,14 +11,24 @@
 </script>
 
 <style lang="sass">
-  *
-    font-family: "Ricty Diminished", sans-serif
-    background-color: #333
-    color: #ddd
-  ul
-    padding: 10px
-    list-style-type: none
-    overflow: scroll
-    li
-      padding-bottom: 5px
+  html
+    width: 100%
+    height: 100%
+    body
+      height: 100%
+      font-family: "Source Han Code JP", "Ricty Diminished", sans-serif
+      color: #ccc
+      background-color: rgba(24, 24, 24, 0.4)
+      opacity: 0.8
+      -webkit-app-region: drag
+      -webkit-user-select: none
+      display: flex
+      align-items: center
+      justify-content: center
+    ul
+      padding: 10px
+      list-style-type: none
+      overflow: scroll
+      li
+        padding-bottom: 5px
 </style>

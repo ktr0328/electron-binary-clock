@@ -1,17 +1,14 @@
 <template lang="pug">
-  div
-    el-header
-      h1 Binary Clock @{{now.format('HH:mm:ss')}}
-    el-main
-      table
-        tr
-          th(v-for="v in clock.definition") {{v}}
-        clock-table-row(title="y" v-bind:data="clock.year")
-        clock-table-row(title="m" v-bind:data="clock.month")
-        clock-table-row(title="d" v-bind:data="clock.day")
-        clock-table-row(title="h" v-bind:data="clock.hour")
-        clock-table-row(title="m" v-bind:data="clock.minute")
-        clock-table-row(title="s" v-bind:data="clock.second")
+  div.clock-container
+    table
+      tr
+        th(v-for="v in clock.definition") {{v}}
+      clock-table-row(title="y" v-bind:data="clock.year")
+      clock-table-row(title="m" v-bind:data="clock.month")
+      clock-table-row(title="d" v-bind:data="clock.day")
+      clock-table-row(title="h" v-bind:data="clock.hour")
+      clock-table-row(title="m" v-bind:data="clock.minute")
+      clock-table-row(title="s" v-bind:data="clock.second")
 </template>
 
 <script>
@@ -62,7 +59,11 @@
 </script>
 
 <style lang="sass" scoped>
-  table
-    th
-      opacity: 0.5
+  .clock-container
+    margin: auto
+    height: 100%
+    table
+      th
+        text-align: center
+        opacity: 1
 </style>
