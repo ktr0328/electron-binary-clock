@@ -34,6 +34,10 @@ function createWindow () {
   const iconPath = path.join(__dirname, '../renderer/assets/ribbon.png')
   const tray = new Tray(iconPath)
   tray.setToolTip('BinaryClock')
+  tray.on('click', () => {
+    if (mainWindow.isVisible()) mainWindow.hide()
+    else mainWindow.show()
+  })
 
   mainWindow.on('closed', () => {
     mainWindow = null
