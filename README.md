@@ -5,7 +5,7 @@
 2進数表記の時計  
 右クリックでカラーピッカーが出ます
 
-![img](./clock.png)
+![img](./clockimage.png)
 
 #### Build Setup
 
