@@ -3,13 +3,13 @@
     td {{title}}
     td(v-for="v in data")
       i(v-if="v === '0'").el-icon-star-off.star.off
-      i(v-else).el-icon-star-on.star.on
+      i(v-else  v-bind:style="color").el-icon-star-on.star.on
 </template>
 
 <script>
   export default {
     name: 'clock-table-row',
-    props: ['title', 'data']
+    props: ['title', 'data', 'color']
   }
 </script>
 
@@ -22,7 +22,7 @@
       transition-duration: 1s
 
     .star.on
-      color: cornflowerblue
+      /*color: cornflowerblue*/
       -webkit-transform: rotate(0deg)
 
     .star.off
