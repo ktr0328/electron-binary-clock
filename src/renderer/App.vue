@@ -20,6 +20,7 @@
 
 <style lang="sass">
   *
+    font-family: "Ricty Diminished", sans-serif
     background-color: #333
     color: #ddd
   ul

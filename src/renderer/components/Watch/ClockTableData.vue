@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'clock-table-data',
+    name: 'clock-table-row',
     props: ['title', 'data']
   }
 </script>
@@ -16,7 +16,7 @@
 <style lang="sass" scoped>
   td
     i
-      font-size: 3em
+      font-size: 2em
     .star
       transition-property: color, -webkit-transform
       transition-duration: 1s
@@ -29,5 +29,4 @@
     .star.off
       color: #444
       -webkit-transform: rotate(360 - 72deg)
-
 </style>

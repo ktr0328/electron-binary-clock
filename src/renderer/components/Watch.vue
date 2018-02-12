@@ -6,20 +6,20 @@
       table
         tr
           th(v-for="v in clock.definition") {{v}}
-        clock-table-data(title="h" v-bind:data="clock.hh")
-        clock-table-data(title="m" v-bind:data="clock.mm")
-        clock-table-data(title="s" v-bind:data="clock.ss")
+        clock-table-row(title="h" v-bind:data="clock.hh")
+        clock-table-row(title="m" v-bind:data="clock.mm")
+        clock-table-row(title="s" v-bind:data="clock.ss")
 </template>
 
 <script>
   import moment from 'moment'
-  import ClockTableData from './Watch/ClockTableData'
+  import ClockTableRow from './Watch/ClockTableData'
 
   export default {
     name: 'watch',
     data () {
       return {
-        now: '',
+        now: moment(),
         clock: {
           definition: ['', 32, 16, 8, 4, 2, 1],
           hh: '',
@@ -48,7 +48,7 @@
           .split('')
       }
     },
-    components: {ClockTableData}
+    components: {ClockTableRow}
   }
 </script>
 

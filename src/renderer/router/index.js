@@ -7,6 +7,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'watch',
+      component: require('@/components/Watch').default
+    },
+    {
+      path: '/landing-page',
       name: 'landing-page',
       component: require('@/components/LandingPage').default
     },
@@ -14,11 +19,6 @@ export default new Router({
       path: '/test-page',
       name: 'test-page',
       component: require('@/components/TestPage').default
-    },
-    {
-      path: '/watch',
-      name: 'watch',
-      component: require('@/components/Watch').default
     },
     {
       path: '*',
