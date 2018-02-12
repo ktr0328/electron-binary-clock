@@ -2,7 +2,8 @@
 > An electron-vue project
 
 ### Binary Clock
-2進数で時計
+2進数表記の時計  
+右クリックでカラーピッカーが出ます
 
 ![img](./clock.png)
 
