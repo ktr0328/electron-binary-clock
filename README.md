@@ -4,6 +4,8 @@
 ### Binary Clock
 2進数で時計
 
+![img](./clock.png)
+
 #### Build Setup
 
 ``` bash
