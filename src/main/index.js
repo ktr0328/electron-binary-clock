@@ -31,7 +31,7 @@ function createWindow () {
   })
 
   mainWindow.loadURL(winURL)
-  const iconPath = path.join(__dirname, '../renderer/assets/ribbon.png')
+  const iconPath = path.join(__static, '/ribbon.png')
   const tray = new Tray(iconPath)
   tray.setToolTip('BinaryClock')
   tray.on('click', () => {
